@@ -1,0 +1,128 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<style>
+
+body {
+	overflow: hidden; /* prevents body from scrolling, we'll fake it with a scrollable_div instead! */
+	margin: 0px; padding: 0px;
+	font-size: 18px;
+}
+.scrollable_div {
+    overflow-y: scroll; /* let the main content div scroll vertically */
+    overflow-x: hidden; /* and not horizontally */
+    -webkit-overflow-scrolling: touch; /* enable smoother/momentum (GPU) scrolling on iphone */
+	width: 100%;	height: 100%; margin: 0px; /* set to full window size */
+	position: absolute; top: 0px; /* momentum scrolling seems to work better with this */
+	z-index: 1; /* ensure content is below header */
+	padding-top: 75px; /* optional: move content below header */
+}
+.sticky {
+	position: fixed; top: 0px; /* fix header to top of window */
+	z-index: 2; /* ensure header is above main content */
+	background-color: #cccccc;
+	width: 100%;height: 70px;
+	margin: 0px; padding: 0px;
+}
+.search-bar {
+	padding: 20px;
+}
+#menu {
+	display: none;
+	background-color: #eeeeee;
+	border: 1px solid;
+	line-height: 40px;
+	font-size: 30px;
+}
+
+</style>
+<script>
+$(document).ready(function() {
+	console.log("doc ready");
+		
+	$("input").on('focus', function(){
+			console.log("got focus");
+			 $("#menu").show();
+	});
+	$("input").on('blur', function(){
+			console.log("got blur");
+			 $("#menu").hide();
+	});
+
+});
+</script>
+</head>
+<body>
+<div class="sticky">
+	<div class="search-bar">
+	Search: 
+	<input>
+	</div>
+	<div id="menu">
+		MENU ITEM 1<BR>
+		MENU ITEM 2<BR>
+		MENU ITEM 3<BR>
+		MENU ITEM 4<BR>
+		MENU ITEM 5<BR>
+		MENU ITEM 6<BR>
+		MENU ITEM 7<BR>
+	</div>
+</div>
+<div class="scrollable_div">
+	1<br>  
+	2<br>  
+	3<br>  
+	4<br>  
+	5<br>  
+	6<br>  
+	7<br>  
+	8<br>  
+	9<br>  
+	10<br>  
+	11<br>  
+	12<br>  
+	13<br>  
+	14<br>  
+	15<br>  
+	16<br>  
+	17<br>  
+	18<br>  
+	19<br>  
+	20<br>  
+	21<br>  
+	22<br>  
+	23<br>  
+	24<br>  
+	25<br>  
+	26<br>  
+	27<br>  
+	28<br>  
+	29<br>  
+	30<br>  
+	31<br>  
+	32<br>  
+	33<br>  
+	34<br>  
+	35<br>  
+	36<br>  
+	37<br>  
+	38<br>  
+	39<br> 
+	40<br>
+	41<br>  
+	42<br>  
+	43<br>  
+	44<br>  
+	45<br>  
+	46<br>  
+	47<br>  
+	48<br>  
+	49<br>  
+	50<br>  
+</div>
+
+</body>
+</html>
